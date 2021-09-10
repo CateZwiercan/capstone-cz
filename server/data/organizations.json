@@ -1,22 +1,32 @@
 [
 	{
-		"OrganizationName": "Organization One",
-		"OrganizationId": "Org1",
-		"Description": "This is organization 1"
+		"OrganizationName": "Fantasy",
+		"OrganizationId": "fantasy",
+		"Description": "This genre is Fantasy"
 	},
 	{
-		"OrganizationName": "Organization Two",
-		"OrganizationId": "Org2",
-		"Description": "This is organization 2"
+		"OrganizationName": "Science Fiction",
+		"OrganizationId": "sciFi",
+		"Description": "This genre is Science Fiction"
     },
     {
-		"OrganizationName": "Organization Three",
-		"OrganizationId": "Org3",
-		"Description": "This is organization 3" 
+		"OrganizationName": "Romance",
+		"OrganizationId": "romance",
+		"Description": "This genre is Romance" 
 	},
 	{
-		"OrganizationName": "Organization Four",
-		"OrganizationId": "Org4",
-		"Description": "This is organization 4"
+		"OrganizationName": "Mystery",
+		"OrganizationId": "mystery",
+		"Description": "This genre is Mystery"
+	},
+	{
+		"OrganizationName": "Thriller",
+		"OrganizationId": "thriller",
+		"Description": "This genre is Thriller"
+	},
+	{
+		"OrganizationName": "Horror",
+		"OrganizationId": "horror",
+		"Description": "This genre is Horror"
 	}
 ]
