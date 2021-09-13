@@ -1,0 +1,50 @@
+ul {
+    list-style-type: none;
+    background-color: #F2E3BC;
+    border-bottom:#414535 solid 3px;
+    height: 2.25em;
+    margin-top: 0;
+    padding: 0;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+li>a {
+    color: #414535;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    display:inline;
+    background-image: url(../../assets/img/Tire-Treads-Crescent-Moon.svg);
+    background-position:right center;
+    background-repeat: no-repeat;
+    padding-right: 1.45em;
+    padding-left: .45em;
+    cursor: pointer;
+}
+
+li>a:hover {
+    text-decoration: #618985 dotted underline;
+}
+
+nav ul li a.active {
+    color: #618985;
+}
+
+@media (max-width: 444px) {
+    ul {
+        height: auto;
+        flex-direction:column;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        background: none;
+        margin: .15em;
+        margin-top: .75em;
+        padding-bottom: .25em;
+        border-bottom: 1px solid #414535;
+        width: 100%;
+        text-align: center;
+    }
+}
