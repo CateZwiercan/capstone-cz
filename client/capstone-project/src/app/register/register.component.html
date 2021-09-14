@@ -1,8 +1,8 @@
+<div id="container">
 <h2>So Excited To Have You!</h2>
 <h4>A few things you need to know:</h4>
 <p>1. You can only be a part of 3 clubs<br>2. You can start your own club!</p>
-<div id="container">
-  <form [formGroup]="regForm">
+  <form [formGroup]="regForm" (ngSubmit)="onSubmit(regForm.value)">
     <!-- First and last Name -->
     <div id="inputs" class="p-fluid">
       <div class="p-col-12 p-md-4">
@@ -45,8 +45,9 @@
     </div>
     <p-button
       label="Register"
-      (onClick)="onSubmit(regForm.value)"
+      type="submit"
       id="regBtn"
     ></p-button>
   </form>
 </div>
+

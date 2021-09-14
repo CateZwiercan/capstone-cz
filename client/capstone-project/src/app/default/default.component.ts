@@ -21,7 +21,7 @@ export class DefaultComponent implements OnInit {
   }
 
   onLogin(): void {
-    this.router.navigate(['myClubs']);
+    this.router.navigate(['myClubs'], {relativeTo: this.route});
   }
 
 }

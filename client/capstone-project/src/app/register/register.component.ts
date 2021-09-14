@@ -13,9 +13,8 @@ export class RegisterComponent implements OnInit {
 
   currentMember: Members;
   regForm: FormGroup;
-  router: Router;
 
-  constructor(private memService: MemberService) { 
+  constructor(private memService: MemberService, private router: Router) { 
     this.regForm = new FormGroup({
       name : new FormControl(null, [Validators.required]),
       email : new FormControl(null, [Validators.required, Validators.email]),
@@ -28,10 +27,9 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(formEntry){
-    this.memService.updateMember(formEntry);
-    MemberService.storeLocalUser(formEntry);
-    this.router.navigate(['findClubs']);
-
+      this.memService.updateMember(formEntry);
+      MemberService.storeLocalUser(formEntry);
+      alert('You have successfully registered')
+      this.router.navigate(['findClubs']);
+    }
   }
-
-}

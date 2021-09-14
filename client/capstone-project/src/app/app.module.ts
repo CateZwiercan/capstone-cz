@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,10 @@ import { InputTextModule } from 'primeng/inputtext';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    InputTextModule
+    InputTextModule,
+    MessagesModule,
+    MessageModule
+    
 
   ],
   providers: [],
