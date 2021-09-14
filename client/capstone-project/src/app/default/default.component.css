@@ -1,6 +1,48 @@
-#register #login {
-    background-color: #F2E3BC;
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+    padding-top: 3em;
+}
 
+.p-button ::ng-deep {
+    background-color: #F2E3BC;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: space-between;
+    
+}
+
+body {
+    padding: 2em;
+}
+
+img {
+    border-radius: 50%;
+    height: 6em;
+    width: 6em;
+    justify-content: space-around;
+}
+
+.description {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+p {
+    justify-items: center;
+    align-items: center;
 }
 
 h1 {

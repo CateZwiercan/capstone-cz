@@ -12,7 +12,8 @@ import { StartClubComponent } from './start-club/start-club.component';
 import { DefaultComponent } from './default/default.component';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { MainComponent } from './main/main.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http'
     FindClubsComponent,
     BookInfoComponent,
     StartClubComponent,
-    DefaultComponent
+    DefaultComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

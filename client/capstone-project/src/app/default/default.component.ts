@@ -1,5 +1,6 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -9,15 +10,14 @@ import { Router } from '@angular/router';
 })
 export class DefaultComponent implements OnInit {
 
-  router: Router;
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
   onRegister(): void {
-    this.router.navigate(['register']);
+    this.router.navigate(['register'], {relativeTo: this.route});
   }
 
   onLogin(): void {
