@@ -1,0 +1,46 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-basis: content;
+    align-content: center;
+    
+}
+
+#container {
+    padding: 2em;
+    margin: 1em;
+    border: 2px solid #618985;
+    flex-basis: fill;
+    display: flex;
+    background-color: #C19875;
+    align-content: center;
+    width: 50%;
+}
+
+#inputs {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2em;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

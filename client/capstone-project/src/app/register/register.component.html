@@ -1,1 +1,52 @@
-<p>register works!</p>
+<h2>So Excited To Have You!</h2>
+<h4>A few things you need to know:</h4>
+<p>1. You can only be a part of 3 clubs<br>2. You can start your own club!</p>
+<div id="container">
+  <form [formGroup]="regForm">
+    <!-- First and last Name -->
+    <div id="inputs" class="p-fluid">
+      <div class="p-col-12 p-md-4">
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+          <input
+            type="text"
+            pInputText
+            placeholder="First and Last Name"
+            formControlName="name"
+          />
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="p-col-12 p-md-4 pt-4">
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">@</span>
+          <input
+            type="text"
+            pInputText
+            placeholder="Email Address"
+            formControlName="email"
+          />
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="p-col-12 p-md-4 pt-4">
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon">#</span>
+          <input
+            type="text"
+            pInputText
+            placeholder="Phone Number"
+            formControlName="phone"
+          />
+        </div>
+      </div>
+    </div>
+    <p-button
+      label="Register"
+      (onClick)="onSubmit(regForm.value)"
+      id="regBtn"
+    ></p-button>
+  </form>
+</div>

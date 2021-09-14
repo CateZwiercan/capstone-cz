@@ -15,8 +15,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -26,9 +26,11 @@ body {
 
 img {
     border-radius: 50%;
-    height: 6em;
-    width: 6em;
+    height: 6rem;
+    width: 6rem;
     justify-content: space-around;
+    align-items: center;
+    margin: 1em;
 }
 
 .description {

@@ -14,6 +14,8 @@ import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,11 @@ import { MainComponent } from './main/main.component'
     AppRoutingModule,
     ButtonModule,
     DropdownModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    InputTextModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
