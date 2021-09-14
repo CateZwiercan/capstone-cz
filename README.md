@@ -9,8 +9,8 @@ This application will allow you to find th ebook club of your dreams based on th
 1. Make sure you have angular installed.
 2. Open in an editor of your choice.
 3. In the terminal, enter this command to naviaget to the right folder `cd capstone-cz\client\capstone-project`
-4. Run npm install just to make sure you have all the goods to make this work.
+4. Run `npm install` just to make sure you have all the goods to make this work.
 5. Run the server in a DIFFERNT terminal by typing the following command `node server.js`
 6. After that type in the command `ng serve`
-7. Open up your browser and go to localhost:4200
+7. Open up your browser and go to `localhost:4200`
 8. Explore to find your book home!
