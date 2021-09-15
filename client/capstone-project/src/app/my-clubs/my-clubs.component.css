@@ -1,0 +1,14 @@
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#joinBtn {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    background-color: #C19875;
+}

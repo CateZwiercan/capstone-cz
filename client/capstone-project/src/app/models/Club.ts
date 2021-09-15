@@ -8,5 +8,6 @@ export interface Club {
     SponsorPhone: string,
     SponsorEmail: string,
     MaxGroupSize: number,
+    BookOfMonth: string,
     Members: Members[];
 }

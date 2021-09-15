@@ -7,6 +7,7 @@
         "SponsorPhone": "555-000-0000",
         "SponsorEmail": "nat214@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "The Beautiful",
         "Members": [
             {
                 "MemberId": 2,
@@ -36,6 +37,7 @@
         "SponsorPhone": "998-223-4456",
         "SponsorEmail": "hawkeFlynn@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "From Blood And Ash",
         "Members": [
             {
                 "MemberId": 3,
@@ -53,6 +55,7 @@
         "SponsorPhone": "555-000-0004",
         "SponsorEmail": "brit805@aol.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "Dune",
         "Members": [
             {
                 "MemberId": 1,
@@ -76,6 +79,7 @@
         "SponsorPhone": "746-204-2735",
         "SponsorEmail": "i_am_iron_man@aol.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "Ender's Game",
         "Members": [
             {
                 "MemberId": 7,
@@ -99,6 +103,7 @@
         "SponsorPhone": "270-210-2380",
         "SponsorEmail": "jDawg@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "It Ends With Us",
         "Members": [
             {
                 "MemberId": 2,
@@ -116,6 +121,7 @@
         "SponsorPhone": "256-386=5282",
         "SponsorEmail": "aHammy@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "Twilight",
         "Members": [
             {
                 "MemberId": 9,
@@ -133,6 +139,7 @@
         "SponsorPhone": "555-000-0012",
         "SponsorEmail": "zwest90@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "Girl on the Train",
         "Members": [
             {
                 "MemberId": 4,
@@ -150,6 +157,7 @@
         "SponsorPhone": "728-482-9374",
         "SponsorEmail": "goneGirl1@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "Gone Girl",
         "Members": [
             {
                 "MemberId": 10,
@@ -167,6 +175,7 @@
         "SponsorPhone": "128-213-2380",
         "SponsorEmail": "i_like_bikes@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "Guest List",
         "Members": [
             {
                 "MemberId": 6,
@@ -184,6 +193,7 @@
         "SponsorPhone": "2837-394-1280",
         "SponsorEmail": "greySloan@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "The Noise",
         "Members": [
             {
                 "MemberId": 11,
@@ -201,6 +211,7 @@
         "SponsorPhone": "182-208-2801",
         "SponsorEmail": "scaryJ@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "IT",
         "Members": [
             {
                 "MemberId": 12,
@@ -218,6 +229,7 @@
         "SponsorPhone": "189-108-2891",
         "SponsorEmail": "patricia@gmail.com",
         "MaxGroupSize": 7,
+        "BookOfMonth": "The Shining",
         "Members": [
             {
                 "MemberId": 13,

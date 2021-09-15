@@ -18,6 +18,7 @@ export class FindClubsComponent implements OnInit {
   cols: any[];
   genre: Genre;
   club: Club;
+  display: boolean = false;
 
 
   constructor(private orgService: OrganizationsService, private clubService: GroupsService, private router: Router) {
@@ -32,11 +33,24 @@ export class FindClubsComponent implements OnInit {
       {header: "Club Name"},
       {header: "Sponsor Name"},
       {header: "Number of Members"},
-
+      {header: "Book of the Month"},
+      {header: "Join/Remove"},
     ]
   }
 
   startClubNav() {
     this.router.navigate(['startClub']);
+  }
+
+  showDialog() {
+    this.display = true;
+  }
+
+  joinClub() {
+
+  }
+
+  leaveClub() {
+    
   }
 }
