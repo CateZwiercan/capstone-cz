@@ -9,12 +9,15 @@ p {
 }
 
 #form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #C19875;
     padding-top: 2em;
 
+}
+
+#inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #subBtn {
@@ -23,4 +26,9 @@ p {
     padding-top: 1em;
     padding-bottom: 1em;
     background-color: #C19875;
+}
+
+#dropdown {
+    flex: 1 1 auto;
+    width: 1%;
 }

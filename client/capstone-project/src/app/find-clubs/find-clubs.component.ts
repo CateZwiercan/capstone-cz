@@ -4,7 +4,8 @@ import { OrganizationsService } from '../services/organizations.service';
 import { Observable } from 'rxjs';
 import { Club } from '../models/Club';
 import { GroupsService } from '../services/groups.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Members } from '../models/Members';
 
 @Component({
   selector: 'app-find-clubs',
@@ -14,19 +15,23 @@ import { Router } from '@angular/router';
 export class FindClubsComponent implements OnInit {
 
 
-  selectedGenre: Genre;
+  selectedClub: Club;
   cols: any[];
   genre: Genre;
   club: Club;
   display: boolean = false;
+  member: Members;
+  clubId: number;
 
 
-  constructor(private orgService: OrganizationsService, private clubService: GroupsService, private router: Router) {
+  constructor(private orgService: OrganizationsService, private clubService: GroupsService, private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.orgService.getGenres().subscribe(gen => this.genre = gen);
     this.clubService.getClubs().subscribe(club => this.club = club);
+    this.activatedRoute.url.subscribe((url) => (this.clubId = Number(url[1].path))
+    );
 
     this.cols = [
       {header: "Genre"},
@@ -46,11 +51,18 @@ export class FindClubsComponent implements OnInit {
     this.display = true;
   }
 
-  joinClub() {
-
+  joinClub(clubId: number) {
+    this.clubService.getClubById(clubId).subscribe((club) => (this.selectedClub = club));
+    console.log(this.selectedClub);
+    this.clubService.addMember(this.selectedClub, clubId);
+    alert('You have joined the club');
+    this.display = false;
   }
 
-  leaveClub() {
-    
+  leaveClub(clubId: number) {
+    this.clubService.getClubById(clubId).subscribe((club) => (this.selectedClub = club));
+    this.clubService.deleteMemberFromClub(clubId, this.member.MemberId);
+    alert('You have left the club');
+    this.display = false;
   }
 }

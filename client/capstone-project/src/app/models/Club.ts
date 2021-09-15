@@ -1,7 +1,7 @@
 import { Members } from "./Members";
 
 export interface Club {
-    GroupId: string,
+    GroupId: number,
     GroupName: string ,
     OrganizationName: string,
     SponsorName: string,

@@ -16,7 +16,7 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-columns="coulmns" let-rowData let-club>
-        <tr [pSelectableRow]="rowData">
+        <tr>
             <td>
                 {{club.OrganizationName}}
             </td>
@@ -44,8 +44,8 @@
     Would you like to Join or Leave this Book Club?
     <ng-template pTemplate="footer">
         <span class="p-buttonset">
-            <button pButton type="button" label="Join" icon="pi pi-check" (click)="joinClub()"></button>
-            <button pButton type="button" label="Leave" icon="pi pi-times" (click)="leaveClub()"></button>
+            <button pButton type="button" label="Join" icon="pi pi-check" (click)="joinClub(club.GroupId)"></button>
+            <button pButton type="button" label="Leave" icon="pi pi-times" (click)="leaveClub(club.GroupId)"></button>
         </span>
     </ng-template>
 </p-dialog>

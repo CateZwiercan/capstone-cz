@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Members } from '../models/Members';
 import { MemberService } from '../services/member.service';
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -14,7 +15,7 @@ export class RegisterComponent implements OnInit {
   currentMember: Members;
   regForm: FormGroup;
 
-  constructor(private memService: MemberService, private router: Router) { 
+  constructor(private memService: MemberService, private router: Router, ) { 
     this.regForm = new FormGroup({
       name : new FormControl(null, [Validators.required]),
       email : new FormControl(null, [Validators.required, Validators.email]),
@@ -26,10 +27,18 @@ export class RegisterComponent implements OnInit {
     this.memService.currentMember.subscribe(mem => this.currentMember = mem);
   }
 
+  registerMember(formEntry){
+    this.currentMember.MemberName = formEntry.name;
+    this.currentMember.MemberEmail = formEntry.email;
+    this.currentMember.MemberPhone = formEntry.phone;
+    this.currentMember.isRegistered = true;
+    this.memService.giveMemberId(this.currentMember);
+  }
+
   onSubmit(formEntry){
-      this.memService.updateMember(formEntry);
-      MemberService.storeLocalUser(formEntry);
-      alert('You have successfully registered')
+      this.registerMember(formEntry);
+      MemberService.storeLocalUser(this.currentMember);
+      alert('You have completed registration');
       this.router.navigate(['findClubs']);
   }
   
