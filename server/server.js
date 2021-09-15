@@ -235,6 +235,7 @@ app.post("/api/groups", urlencodedParser, function (req, res) {
 		SponsorPhone: req.body.SponsorPhone,
 		SponsorEmail: req.body.SponsorEmail,
 		MaxGroupSize: Number(req.body.MaxGroupSize),
+        BookOfMonth: req.body.BookOfMonth,
         Members : []
     };
 
