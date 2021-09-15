@@ -7,9 +7,9 @@ import { Members } from '../models/Members';
 })
 export class MemberService {
 
- private member: Members = new Members();
+  private member: Members = new Members();
   currentMember = new BehaviorSubject<Members>(this.member);
-
+  memberCount: number = 13;
 
   constructor() { }
 
@@ -21,10 +21,9 @@ export class MemberService {
     }
   }
 
-  updateMember(mem: Members) {
-    //fix this to be next member
-    mem.isRegistered = true;
-    this.currentMember.next(this.member);
+  giveMemberId(mem: Members) {
+    mem.MemberId = this.memberCount + 1;
+    this.memberCount++;
   }
 
   static storeLocalUser(member) {

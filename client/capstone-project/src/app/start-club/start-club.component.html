@@ -1,6 +1,7 @@
 <h2>Start Your Own Paradise!</h2>
 <p><strong>Max Group size is 7!</strong></p>
 <form [formGroup]="startClubForm" (ngSubmit)="onSubmit(startClubForm.value)" id="form">
+  <div id="inputs">
     <!-- First and last Name -->
     <div id="firstFour" class="p-fluid">
       <div class="p-col-12 p-md-4">
@@ -10,7 +11,7 @@
             type="text"
             pInputText
             placeholder="Group Name"
-            formControlName="name"
+            formControlName="GroupName"
           />
         </div>
       </div>
@@ -19,12 +20,14 @@
       <div class="p-col-12 p-md-4 pt-4">
         <div class="p-inputgroup">
           <span class="p-inputgroup-addon"><i class="pi pi-folder"></i></span>
-          <input
-            type="text"
-            pInputText
-            placeholder="Genre"
-            formControlName="genre"
-          />
+          <p-dropdown
+            id="dropdown"
+            [options]="genres"
+            [(ngModel)]="selectedGenre"
+            optionLabel="OrganizationName"
+            placeholder="Select Genre"
+            formControlName="OranizationName"
+          ></p-dropdown>
         </div>
       </div>
 
@@ -36,7 +39,7 @@
             type="text"
             pInputText
             placeholder="Sponser Name"
-            formControlName="sponserName"
+            formControlName="SponsorName"
           />
         </div>
       </div>
@@ -48,7 +51,7 @@
             type="text"
             pInputText
             placeholder="Sponser Email"
-            formControlName="sponserEmail"
+            formControlName="SponsorEmail"
           />
         </div>
       </div>
@@ -62,7 +65,7 @@
             type="text"
             pInputText
             placeholder="Sponser Phone"
-            formControlName="sponserPhone"
+            formControlName="SponsorPhone"
           />
         </div>
       </div>
@@ -74,7 +77,7 @@
             type="text"
             pInputText
             placeholder="Group Size"
-            formControlName="groupSize"
+            formControlName="MaxGroupSize"
           />
         </div>
       </div>
@@ -86,13 +89,13 @@
             type="text"
             pInputText
             placeholder="Book of the Month"
-            formControlName="bookOfMonth"
+            formControlName="BookOfMonth"
           />
         </div>
       </div>
     </div>
-  </form>
-  <p-button
+  </div>
+    <p-button
       label="Submit"
       type="submit"
       id="subBtn"
@@ -100,3 +103,5 @@
       icon="pi pi-check" 
       iconPos="left"
     ></p-button>
+  </form>
+  
