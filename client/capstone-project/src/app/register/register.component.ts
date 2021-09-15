@@ -31,5 +31,6 @@ export class RegisterComponent implements OnInit {
       MemberService.storeLocalUser(formEntry);
       alert('You have successfully registered')
       this.router.navigate(['findClubs']);
-    }
+  }
+  
   }

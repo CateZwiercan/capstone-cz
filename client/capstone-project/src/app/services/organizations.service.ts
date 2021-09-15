@@ -8,13 +8,14 @@ import { Genre } from '../models/Genre';
 })
 export class OrganizationsService {
 
-  private genresUrl: string = 'http://localhost:8082/api/orgainzations'
+  private genresUrl: string = 'http://localhost:8082/api/organizations';
 
 
   constructor(private httpClient: HttpClient) { }
 
   //get genres
-  getGenres(): Observable<Genre[]> {
-    return this.httpClient.get<Genre[]>(this.genresUrl);
+  getGenres(): Observable<Genre> {
+    const genre: Observable<Genre> = this.httpClient.get<Genre>(this.genresUrl);
+    return genre;
   }
 }

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Genre } from '../models/Genre';
 import { OrganizationsService } from '../services/organizations.service';
 import { Observable } from 'rxjs';
+import { Club } from '../models/Club';
+import { GroupsService } from '../services/groups.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-find-clubs',
@@ -10,14 +13,30 @@ import { Observable } from 'rxjs';
 })
 export class FindClubsComponent implements OnInit {
 
-  genres: Observable<Genre[]>;
-  selectedGenre: Genre;
 
-  constructor(private orgService: OrganizationsService) { 
-    this.genres = orgService.getGenres();
+  selectedGenre: Genre;
+  cols: any[];
+  genre: Genre;
+  club: Club;
+
+
+  constructor(private orgService: OrganizationsService, private clubService: GroupsService, private router: Router) {
   }
 
   ngOnInit(): void {
+    this.orgService.getGenres().subscribe(gen => this.genre = gen);
+    this.clubService.getClubs().subscribe(club => this.club = club);
+
+    this.cols = [
+      {header: "Genre"},
+      {header: "Club Name"},
+      {header: "Sponsor Name"},
+      {header: "Number of Members"},
+
+    ]
   }
 
+  startClubNav() {
+    this.router.navigate(['startClub']);
+  }
 }

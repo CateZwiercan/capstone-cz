@@ -1,5 +1,5 @@
 export interface Genre {
-    name: string;
-    id: string;
-    decription: string;
+    OrganizationName: string;
+    OrganizationId: string;
+    Description: string;
 }

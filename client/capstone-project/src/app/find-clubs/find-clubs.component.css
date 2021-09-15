@@ -3,3 +3,23 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
+#dropdown {
+    display: flex;
+    justify-content: center;
+}
+
+#table {
+    display: flex;
+    padding: 0 3em 0 3em;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+}
+
+#btn {
+    display: flex;
+    justify-content: center;
+}

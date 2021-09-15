@@ -7,13 +7,13 @@ import { Members } from '../models/Members';
 })
 export class MemberService {
 
- private member: Members = new Members('', '', '', null, false);
+ private member: Members = new Members();
   currentMember = new BehaviorSubject<Members>(this.member);
 
 
   constructor() { }
 
-  getUser(): Members {
+  getMember(): Members {
     if(localStorage.getItem('currentMember')) {
       const member = JSON.parse(localStorage.getItem('currentMember'));
       this.currentMember = new BehaviorSubject(this.member);
@@ -23,7 +23,6 @@ export class MemberService {
 
   updateMember(mem: Members) {
     //fix this to be next member
-    mem.id = 1;
     mem.isRegistered = true;
     this.currentMember.next(this.member);
   }

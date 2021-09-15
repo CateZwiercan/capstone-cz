@@ -1,7 +1,7 @@
 export class Members {
-    name: string;
-    email: string;
-    phone: string;
-    id: number;
+    MemberId: number;
+    MemberEmail: string;
+    MemberName: string;
+    MemberPhone: string;
     isRegistered: boolean;
 }
