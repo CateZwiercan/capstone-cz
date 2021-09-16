@@ -16,11 +16,12 @@ export class StartClubComponent implements OnInit {
   club: Club;
   genres: Genre[];
   selectedGenre: Genre;
+  clubIdCounter: number = 16;
 
   constructor(private clubService: GroupsService, private genreService: OrganizationsService) { 
     this.startClubForm = new FormGroup({
       GroupName : new FormControl(null, [Validators.required]),
-      OranizationName : new FormControl(null, [Validators.required]),
+      OrganizationName : new FormControl(null, [Validators.required]),
       SponsorName : new FormControl(null, [Validators.required]),
       SponsorEmail : new FormControl(null, [Validators.required, Validators.email]),
       SponsorPhone : new FormControl(null, [Validators.required]),

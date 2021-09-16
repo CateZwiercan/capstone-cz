@@ -30,8 +30,7 @@ export class GroupsService {
       club,
       this.jsonContentTypeHeaders
     );
-    console.log(`addGoal(${club}) returned ${results}`);
-    console.log(typeof club.GroupId);
+    console.log(club.GroupId);
     return results;
   }
 
