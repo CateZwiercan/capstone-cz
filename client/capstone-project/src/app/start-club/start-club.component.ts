@@ -47,9 +47,13 @@ export class StartClubComponent implements OnInit {
   }
 
   onSubmit(formEntry){
-    this.clubService.addClub(formEntry).subscribe((club) => this.clubService.getClubs());
-    console.log(formEntry);
-    this.mesService.add({severity:'success', summary:'Confirmed', detail:'You have started a new club'});
+    if(this.startClubForm.valid) {
+      this.clubService.addClub(formEntry).subscribe((club) => this.clubService.getClubs());
+      this.mesService.add({severity:'success', summary:'Confirmed', detail:'You have started a new club'});
+    } else {
+      this.mesService.add({severity:'error', summary:'Invalid Entry', detail:'Please make sure all fields are filled out'});
+    }
+    
 }
 
 }
