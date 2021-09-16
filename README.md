@@ -2,7 +2,7 @@
 
 Welcome to Cavern of Books!
 
-This application will allow you to find th ebook club of your dreams based on the genre of books you like to read. If you can't find a club that works for you, you can start your own magical place. You can only be in 3 book clubs max.
+This application will allow you to find the book club of your dreams based on the genre of books you like to read. If you can't find a club that works for you, you can start your own magical place. You can only be in 3 book clubs max.
 
 # To run the Server
 1. Open a terminal
