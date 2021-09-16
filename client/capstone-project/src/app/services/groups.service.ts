@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Club } from '../models/Club';
 import { Observable } from 'rxjs';
+import { Members } from '../models/Members';
 
 
 @Injectable({
@@ -35,15 +36,13 @@ export class GroupsService {
   }
 
   //add member to club
-  addMember(club: Club, clubId: number): Observable<Club> {
-    const results: Observable<Club> = this.http.post<Club>(`${this.clubUrl}/${clubId}/members`, club, this.jsonContentTypeHeaders);
-    return results;
+  addMember(club: Club, member: Members): Observable<Members> {
+    return this.http.post<Members>(`${this.clubUrl}/${club.GroupId}/members`, member, this.jsonContentTypeHeaders);
   }
 
   //delete member from club
-  deleteMemberFromClub(clubId: number, memberId: number): Observable<Club> {
-    const results: Observable<Club> = this.http.delete<Club>(`${this.clubUrl}/${clubId}/members/${memberId}`);
-    return results;
+  deleteMemberFromClub(clubId: number, memberId: number): Observable<Members> {
+    return this.http.delete<Members>(`${this.clubUrl}/${clubId}/members/${memberId}`);
   }
 
   //get club by id

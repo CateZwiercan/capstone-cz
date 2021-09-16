@@ -33,7 +33,7 @@
                 {{club.BookOfMonth}}
             </td>
             <td>
-                <p-button class="p-button-sm" label="Click Here" (onClick)="showDialog()"></p-button>
+                <p-button class="p-button-sm" label="Click Here" (onClick)="showDialog(club)"></p-button>
             </td>
         </tr>
     </ng-template>
@@ -44,8 +44,8 @@
     Would you like to Join or Leave this Book Club?
     <ng-template pTemplate="footer">
         <span class="p-buttonset">
-            <button pButton type="button" label="Join" icon="pi pi-check" (click)="joinClub(club.GroupId)"></button>
-            <button pButton type="button" label="Leave" icon="pi pi-times" (click)="leaveClub(club.GroupId)"></button>
+            <button pButton type="button" label="Join" icon="pi pi-check" (click)="joinClub()"></button>
+            <button pButton type="button" label="Leave" icon="pi pi-times" (click)="leaveClub()"></button>
         </span>
     </ng-template>
 </p-dialog>

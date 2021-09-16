@@ -3,5 +3,4 @@ export class Members {
     MemberEmail: string;
     MemberName: string;
     MemberPhone: string;
-    isRegistered: boolean;
 }

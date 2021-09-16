@@ -31,7 +31,6 @@ export class RegisterComponent implements OnInit {
     this.currentMember.MemberName = formEntry.name;
     this.currentMember.MemberEmail = formEntry.email;
     this.currentMember.MemberPhone = formEntry.phone;
-    this.currentMember.isRegistered = true;
     this.memService.giveMemberId(this.currentMember);
   }
 

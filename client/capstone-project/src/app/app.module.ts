@@ -7,7 +7,6 @@ import { NavComponent } from './nav/nav.component';
 import { RegisterComponent } from './register/register.component';
 import { MyClubsComponent } from './my-clubs/my-clubs.component';
 import { FindClubsComponent } from './find-clubs/find-clubs.component';
-import { BookInfoComponent } from './book-info/book-info.component';
 import { StartClubComponent } from './start-club/start-club.component';
 import { DefaultComponent } from './default/default.component';
 import { ButtonModule } from 'primeng/button';
@@ -28,7 +27,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     RegisterComponent,
     MyClubsComponent,
     FindClubsComponent,
-    BookInfoComponent,
     StartClubComponent,
     DefaultComponent,
     MainComponent

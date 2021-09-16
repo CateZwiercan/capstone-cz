@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Route } from '@angular/router';
-import { BookInfoComponent } from './book-info/book-info.component';
 import { DefaultComponent } from './default/default.component';
 import { FindClubsComponent } from './find-clubs/find-clubs.component';
 import { MyClubsComponent } from './my-clubs/my-clubs.component';
@@ -20,7 +19,6 @@ const routes: Routes = [
         {path: 'myClubs', component: MyClubsComponent},
         {path: 'findClubs', component: FindClubsComponent},
         {path: 'startClub', component: StartClubComponent},
-        {path: 'bookInfo', component: BookInfoComponent},
         fallbackRoute
     ]
 }

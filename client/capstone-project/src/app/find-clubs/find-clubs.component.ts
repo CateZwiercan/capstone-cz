@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { Genre } from '../models/Genre';
 import { OrganizationsService } from '../services/organizations.service';
 import { Observable } from 'rxjs';
@@ -6,6 +6,7 @@ import { Club } from '../models/Club';
 import { GroupsService } from '../services/groups.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Members } from '../models/Members';
+import { MemberService } from '../services/member.service';
 
 @Component({
   selector: 'app-find-clubs',
@@ -24,14 +25,13 @@ export class FindClubsComponent implements OnInit {
   clubId: number;
 
 
-  constructor(private orgService: OrganizationsService, private clubService: GroupsService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private orgService: OrganizationsService, private clubService: GroupsService, private router: Router, private memberService: MemberService) {
   }
 
   ngOnInit(): void {
     this.orgService.getGenres().subscribe(gen => this.genre = gen);
     this.clubService.getClubs().subscribe(club => this.club = club);
-    this.activatedRoute.url.subscribe((url) => (this.clubId = Number(url[1].path))
-    );
+    this.member = this.memberService.getMember();
 
     this.cols = [
       {header: "Genre"},
@@ -39,7 +39,7 @@ export class FindClubsComponent implements OnInit {
       {header: "Sponsor Name"},
       {header: "Number of Members"},
       {header: "Book of the Month"},
-      {header: "Join/Remove"},
+      {header: "Join/Leave Club"},
     ]
   }
 
@@ -47,22 +47,27 @@ export class FindClubsComponent implements OnInit {
     this.router.navigate(['startClub']);
   }
 
-  showDialog() {
+  showDialog(club: Club) {
     this.display = true;
+    this.clubService.getClubById(club.GroupId).subscribe((club) => (this.selectedClub = club));
   }
 
-  joinClub(clubId: number) {
-    this.clubService.getClubById(clubId).subscribe((club) => (this.selectedClub = club));
+  joinClub() {
+    this.clubService.addMember(this.selectedClub, this.member).subscribe(
+      club => this.clubService.getClubById(this.selectedClub.GroupId)
+    );
     console.log(this.selectedClub);
-    this.clubService.addMember(this.selectedClub, clubId);
     alert('You have joined the club');
+    this.clubService.getClubs().subscribe(club => this.club = club);
     this.display = false;
   }
 
-  leaveClub(clubId: number) {
-    this.clubService.getClubById(clubId).subscribe((club) => (this.selectedClub = club));
-    this.clubService.deleteMemberFromClub(clubId, this.member.MemberId);
+  leaveClub() {
+    this.clubService.deleteMemberFromClub(this.selectedClub.GroupId, this.member.MemberId).subscribe(
+      club => this.clubService.getClubById(this.selectedClub.GroupId)
+    );;
     alert('You have left the club');
+    this.clubService.getClubs().subscribe(club => this.club = club);
     this.display = false;
   }
 }
