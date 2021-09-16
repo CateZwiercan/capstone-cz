@@ -6,7 +6,7 @@ This application will allow you to find th ebook club of your dreams based on th
 
 # To run the Server
 1. Open a terminal
-2. 3. In the terminal, enter this command to navigate to the right folder `cd capstone-cz\server`
+2. In the terminal, enter this command to navigate to the right folder `cd capstone-cz\server`
 3. Run the server by typing the following command `node server.js`
 
 # To run the client
