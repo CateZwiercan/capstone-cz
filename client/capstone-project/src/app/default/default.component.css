@@ -35,7 +35,7 @@ img {
 
 .description {
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -43,7 +43,7 @@ img {
 }
 
 p {
-    justify-items: center;
+    justify-content: center;
     align-items: center;
 }
 

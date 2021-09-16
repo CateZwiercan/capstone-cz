@@ -12,8 +12,15 @@ h2 {
 
 section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #C19875;
+    
+}
+
+#card {
+    width: '20rem';
+    margin-bottom: '2em';
+    padding: 1em;
 }

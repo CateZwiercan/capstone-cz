@@ -8,8 +8,6 @@ import { Router } from '@angular/router';
 })
 export class MyClubsComponent implements OnInit {
 
-  myClubs;
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {

@@ -21,6 +21,7 @@ import { ToastModule } from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MemberInfoComponent } from './find-clubs/member-info/member-info.component';
 import {ConfirmPopupModule} from 'primeng/confirmpopup';
+import { CardModule } from 'primeng/card'
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {ConfirmPopupModule} from 'primeng/confirmpopup';
     DialogModule,
     BrowserAnimationsModule,
     ToastModule,
-    ConfirmPopupModule
+    ConfirmPopupModule,
+    CardModule
     
   ],
   providers: [],
