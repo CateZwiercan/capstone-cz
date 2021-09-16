@@ -35,6 +35,9 @@
             <td>
                 <p-button class="p-button-sm" label="Click Here" (onClick)="showDialog(club)"></p-button>
             </td>
+            <td>
+                <p-button class="p-button-sm" label="View Members" (onClick)="viewMembers(club)"></p-button>
+            </td>
         </tr>
     </ng-template>
 </p-table>
@@ -47,5 +50,10 @@
             <button pButton type="button" label="Join" icon="pi pi-check" (click)="joinClub()"></button>
             <button pButton type="button" label="Leave" icon="pi pi-times" (click)="leaveClub()"></button>
         </span>
+    </ng-template>
+</p-dialog>
+<p-dialog header="Members" [(visible)]="displayMembers" [modal]="true" [style]="{width: '60vw'}" [keepInViewport]="true" closable="true">
+    <ng-template pTemplate="body">
+        <app-member-info [club]="selectedClub"></app-member-info>
     </ng-template>
 </p-dialog>

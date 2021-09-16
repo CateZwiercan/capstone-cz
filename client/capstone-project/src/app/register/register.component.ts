@@ -8,14 +8,14 @@ import { MemberService } from '../services/member.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
 
   currentMember: Members;
   regForm: FormGroup;
 
-  constructor(private memService: MemberService, private router: Router, ) { 
+  constructor(private memService: MemberService, private router: Router) { 
     this.regForm = new FormGroup({
       name : new FormControl(null, [Validators.required]),
       email : new FormControl(null, [Validators.required, Validators.email]),

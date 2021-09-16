@@ -23,6 +23,7 @@ export class FindClubsComponent implements OnInit {
   display: boolean = false;
   member: Members;
   clubId: number;
+  displayMembers: boolean = false;
 
 
   constructor(private orgService: OrganizationsService, private clubService: GroupsService, private router: Router, private memberService: MemberService) {
@@ -40,11 +41,17 @@ export class FindClubsComponent implements OnInit {
       {header: "Number of Members"},
       {header: "Book of the Month"},
       {header: "Join/Leave Club"},
+      {header: "View Members In Club"},
     ]
   }
 
   startClubNav() {
     this.router.navigate(['startClub']);
+  }
+
+  viewMembers(club: Club) {
+    this.clubService.getClubById(club.GroupId).subscribe((club) => (this.selectedClub = club));
+    this.displayMembers = true;
   }
 
   showDialog(club: Club) {

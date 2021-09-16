@@ -1,0 +1,22 @@
+<p-table id="table" [columns]="cols" [value]="members" [paginator]="true" [rows]="3" responsiveLayout="scroll">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-columns="coulmns" let-members>
+        <tr>
+            <td>
+                {{members.MemberName}}
+            </td>
+            <td>
+                {{members.MemberEmail}}
+            </td>
+            <td>
+                {{members.MemberPhone}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

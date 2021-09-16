@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MessageService } from 'primeng/api';
 import { Club } from '../models/Club';
 import { Genre } from '../models/Genre';
 import { GroupsService } from '../services/groups.service';
 import { OrganizationsService } from '../services/organizations.service';
 
+
 @Component({
   selector: 'app-start-club',
   templateUrl: './start-club.component.html',
-  styleUrls: ['./start-club.component.css']
+  styleUrls: ['./start-club.component.css'],
+  providers: [MessageService]
 })
 export class StartClubComponent implements OnInit {
 
@@ -18,7 +21,7 @@ export class StartClubComponent implements OnInit {
   selectedGenre: Genre;
   clubIdCounter: number = 16;
 
-  constructor(private clubService: GroupsService, private genreService: OrganizationsService) { 
+  constructor(private clubService: GroupsService, private genreService: OrganizationsService, private mesService: MessageService) { 
     this.startClubForm = new FormGroup({
       GroupName : new FormControl(null, [Validators.required]),
       OrganizationName : new FormControl(null, [Validators.required]),
@@ -46,7 +49,7 @@ export class StartClubComponent implements OnInit {
   onSubmit(formEntry){
     this.clubService.addClub(formEntry).subscribe((club) => this.clubService.getClubs());
     console.log(formEntry);
-    alert('You have successfully started a new club')
+    this.mesService.add({severity:'success', summary:'Confirmed', detail:'You have started a new club'});
 }
 
 }

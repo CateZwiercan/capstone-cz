@@ -18,7 +18,9 @@ import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { ToastModule } from 'primeng/toast';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MemberInfoComponent } from './find-clubs/member-info/member-info.component';
+import {ConfirmPopupModule} from 'primeng/confirmpopup';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     FindClubsComponent,
     StartClubComponent,
     DefaultComponent,
-    MainComponent
+    MainComponent,
+    MemberInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     TableModule,
     DialogModule,
     BrowserAnimationsModule,
-    ToastModule
+    ToastModule,
+    ConfirmPopupModule
     
   ],
   providers: [],
